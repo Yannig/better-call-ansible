@@ -1,0 +1,59 @@
+---
+
+as-efluid:
+  hosts: {}
+
+as-efluidnet:
+  hosts: {}
+
+as-migefluid:
+  hosts: {}
+
+as-eldap:
+  hosts: {}
+
+oracle-efluid:
+  hosts: {}
+
+oracle-efluidnet:
+  hosts: {}
+
+oracle-migefluid:
+  hosts: {}
+
+oracle-eldap:
+  hosts: {}
+
+oracle:
+  children:
+    oracle-efluid:
+    oracle-efluidnet:
+    oracle-migefluid:
+    oracle-eldap:
+
+as:
+  children:
+    as-efluid:
+    as-efluidnet:
+    as-migefluid:
+    as-eldap:
+
+efluid:
+  children:
+    as-efluid:
+    oracle-efluid:
+
+efluidnet:
+  children:
+    as-efluidnet:
+    oracle-efluidnet:
+
+migefluid:
+  children:
+    as-migefluid:
+    oracle-migefluid:
+
+eldap:
+  children:
+    as-eldap:
+    oracle-eldap:

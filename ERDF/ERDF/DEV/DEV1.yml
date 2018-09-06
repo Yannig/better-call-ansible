@@ -1,0 +1,17 @@
+---
+
+as-efluid:
+  hosts:
+    dev1-as1:
+
+as-efluidnet:
+  hosts:
+    dev1-as1:
+
+oracle-efluid:
+  hosts:
+    dev1-ora1:
+
+oracle-efluidnet:
+  hosts:
+    dev1-ora1:
